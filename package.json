@@ -21,6 +21,7 @@
     "@typescript-eslint/eslint-plugin": "^5.21.0",
     "@typescript-eslint/parser": "^5.21.0",
     "@vitejs/plugin-vue": "^2.3.1",
+    "cz-customizable": "^6.3.0",
     "eslint": "^8.14.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
@@ -36,8 +37,11 @@
     "vue-tsc": "^0.34.7"
   },
   "lint-staged": {
-    "src/**/*.{js,vue,ts}": [
-      "eslint --fix"
-    ]
+    "src/**/*.{js,vue,ts}": "eslint --fix"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    }
   }
 }
