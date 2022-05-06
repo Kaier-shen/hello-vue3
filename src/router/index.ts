@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 import Home from '@/views/home.vue'
-import Vuex from '@/views/vuex.vue'
+import Test from '@/views/Test.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -9,9 +9,9 @@ const routes: Array<RouteRecordRaw> = [
     component: Home
   },
   {
-    path: '/vuex',
-    name: 'Vuex',
-    component: Vuex
+    path: '/test',
+    name: 'test',
+    component: Test
   },
   {
     path: '/axios',

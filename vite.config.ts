@@ -1,15 +1,24 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
+import importElementPlus from 'vite-plugin-element-plus'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
   resolve: {
     alias: {
+      '~/': `${resolve(__dirname, 'src')}/`,
       '@': resolve(__dirname, 'src') // 设置 `@` 指向 `src` 目录
     }
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@use "~/styles/element-variables.scss" as *;`
+      }
+    }
+  },
+  plugins: [vue(), importElementPlus({ useSource: true })],
   base: './', // 设置打包路径
   server: {
     port: 4000, // 设置服务启动端口号
