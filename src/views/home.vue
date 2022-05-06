@@ -13,6 +13,6 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'H-ome'
+  name: 'Home'
 })
 </script>
