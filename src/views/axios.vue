@@ -5,6 +5,6 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'A-xios'
+  name: 'Axios'
 })
 </script>
